@@ -1,6 +1,7 @@
 package com.gildedrose.qualite;
 
 import com.gildedrose.Item;
+import com.gildedrose.Qualitatif;
 
 public abstract class AbstractRegleQualite implements Qualitatif {
 

@@ -1,5 +1,10 @@
 package com.gildedrose;
 
+import static com.gildedrose.suivi.SuiviStock.appliquerRegleDureeLimiteVenteJournaliere;
+import static com.gildedrose.suivi.SuiviStock.appliquerRegleQualiteJournaliere;
+
+import java.util.function.Function;
+
 class GildedRose {
     Item[] items;
 
@@ -8,6 +13,13 @@ class GildedRose {
     }
 
     public void updateQuality() {
+        for (Item item : items) {
+            Function<Item, Item> regleSuiviStockJournalier = appliquerRegleDureeLimiteVenteJournaliere().andThen(appliquerRegleQualiteJournaliere());
+            regleSuiviStockJournalier.apply(item);
+        }
+    }
+    
+    public void updateQualityOld() {
         for (int i = 0; i < items.length; i++) {
             if (!items[i].name.equals("Aged Brie")
                     && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
