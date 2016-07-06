@@ -1,7 +1,6 @@
 package com.gildedrose.perissable;
 
 import com.gildedrose.Item;
-import com.gildedrose.Perissable;
 
 public class PeremptionLineaire implements Perissable {
 

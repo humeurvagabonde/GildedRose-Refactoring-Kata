@@ -1,4 +1,6 @@
-package com.gildedrose;
+package com.gildedrose.qualite;
+
+import com.gildedrose.Item;
 
 public interface Qualitatif {
 

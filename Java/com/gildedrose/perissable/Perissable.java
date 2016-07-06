@@ -1,4 +1,6 @@
-package com.gildedrose;
+package com.gildedrose.perissable;
+
+import com.gildedrose.Item;
 
 public interface Perissable {
 
